@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
     const ScreenHotandNew(),
     const ScreenFastandLaugh(),
     const ScreenSearch(),
-    const ScreenDownloads()
+     ScreenDownloads()
   ];
 
   @override
