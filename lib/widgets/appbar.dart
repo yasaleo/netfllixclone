@@ -13,7 +13,7 @@ class AppbarWidget extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             data,
-            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+            style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
           ),
         ),
         const Spacer(),

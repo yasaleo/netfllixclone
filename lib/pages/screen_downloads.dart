@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/widgets/appbar.dart';
-import 'package:netflix_clone/widgets/kcolors.dart';
+import 'package:netflix_clone/widgets/kvariables.dart';
 
 class ScreenDownloads extends StatelessWidget {
   ScreenDownloads({super.key});
@@ -25,24 +25,33 @@ class ScreenDownloads extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Row(
-            children: [
-              SizedBox(
-                width: size.width * .02,
-              ),
-              const Icon(Icons.settings),
-              SizedBox(
-                width: size.width * .02,
-              ),
-              const Text('Smart Downloads')
-            ],
+          const SizedBox(
+            height: 10,
+          ),
+          _Smartdownloads(size: size),
+          const SizedBox(
+            height: 20,
           ),
           const Text(
+            
             'Indroducing Downloads for You',
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
           ),
-          const Text(
-              "We'll download a personlised selection of movies and shows for you, so there is always something to watch on your device "),
+          const SizedBox(
+            height: 15,
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+                "We'll download a personlised selection of \nmovies and shows for you, so there's \n always something to watch on your\n device ",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 15
+                ),
+                ),
+          ),
           SizedBox(
             height: size.width,
             width: size.width,
@@ -73,27 +82,73 @@ class ScreenDownloads extends StatelessWidget {
               ],
             ),
           ),
-          MaterialButton(
-            color: kcolorblue,
-            onPressed: () {},
-            child: const Text(
-              'Set Up',
-              style: TextStyle(fontSize: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: MaterialButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              height: 50,
+              color: kcolorblue,
+              onPressed: () {},
+              child: const Text(
+                'Set Up',
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           ),
-          MaterialButton(
-            color: kcolorwhite,
-            onPressed: () {},
-            child: const Text(
-              'See what you can download',
-              style: TextStyle(
-                fontSize: 20,
-                color: kcolorblack,
+          const SizedBox(
+            height: 23,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 45),
+            child: MaterialButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)),
+              height: 50,
+              color: kcolorwhite,
+              onPressed: () {},
+              child: const Text(
+                'See what you can download',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: kcolorblack,
+                ),
               ),
             ),
           )
         ],
       ),
+    );
+  }
+}
+
+class _Smartdownloads extends StatelessWidget {
+  const _Smartdownloads({
+    Key? key,
+    required this.size,
+  }) : super(key: key);
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        SizedBox(
+          width: size.width * .02,
+        ),
+        const Icon(
+          Icons.settings,
+          size: 23,
+        ),
+        SizedBox(
+          width: size.width * .02,
+        ),
+        const Text(
+          'Smart Downloads',
+          style: TextStyle(fontSize: 23),
+        )
+      ],
     );
   }
 }
@@ -125,7 +180,7 @@ class Stackedimages extends StatelessWidget {
             boxShadow: const [
               BoxShadow(
                 color: kcolorblack,
-                blurRadius:11,
+                blurRadius: 11,
               )
             ],
             borderRadius: BorderRadius.circular(7),
@@ -137,3 +192,5 @@ class Stackedimages extends StatelessWidget {
     );
   }
 }
+
+

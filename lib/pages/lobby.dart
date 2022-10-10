@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/widgets/bottom_navigationbar.dart';
 import 'package:netflix_clone/pages/screen_downloads.dart';
-import 'package:netflix_clone/pages/screen_fast_and_laughs.dart';
-import 'package:netflix_clone/pages/screen_home.dart';
-import 'package:netflix_clone/pages/screen_hot_and_new.dart';
-import 'package:netflix_clone/pages/screen_search.dart';
+import 'package:netflix_clone/pages/fast%20&%20laugh/screen_fast_and_laughs.dart';
+import 'package:netflix_clone/pages/screenhome/screen_home.dart';
+import 'package:netflix_clone/pages/%20Hot%20&%20New/screen_hot_and_new.dart';
+import 'package:netflix_clone/pages/searchpage/screen_search.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
